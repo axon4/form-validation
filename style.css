@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 html {
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 body {
@@ -23,20 +23,20 @@ body {
 	flex-direction: column;
 	align-items: center;
 	border-radius: 10px;
-	box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4)
+	box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
 }
 
 form {
-	width: 90%
+	width: 90%;
 }
 
 .form-group {
-	height: 65px
+	height: 65px;
 }
 
 label {
 	position: relative;
-	bottom: 3px
+	bottom: 3px;
 }
 
 input {
@@ -47,15 +47,15 @@ input {
 	border-radius: 5px;
 	outline: none;
 	box-sizing: border-box;
-	transition: all 0.3s
+	transition: all 0.3s;
 }
 
 input:valid {
-	border: 1px solid green
+	border: 1px solid green;
 }
 
 input:invalid {
-	border: 1px solid red
+	border: 1px solid red;
 }
 
 button {
@@ -69,16 +69,16 @@ button {
 	font-family: Sen, sans-serif;
 	font-size: 20px;
 	letter-spacing: 2px;
-	cursor: pointer
+	cursor: pointer;
 }
 
 button:hover {
 	filter: brightness(200%);
-	background-color: rgb(22, 22, 22)
+	background-color: rgb(22, 22, 22);
 }
 
 button:focus {
-	outline: none
+	outline: none;
 }
 
 .message-container {
@@ -89,9 +89,9 @@ button:focus {
 	justify-content: center;
 	border: 1px solid black;
 	border-radius: 5px;
-	color: black
+	color: black;
 }
 
 h3 {
-	margin: auto
+	margin: auto;
 }

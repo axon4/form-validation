@@ -1,7 +1,7 @@
-# Form Validation
+# Form-Validation
 
-* Validate your form and guide the user with visual cues.
-* Valid submitted data is tabled in the console.
+* validate form and guide user with visual cues
+* valid submitted-data tabled in conSole
 
 ## Stack
 

@@ -1,39 +1,40 @@
 const form = document.querySelector('form');
-const passwordElement = document.getElementById('password');
-const passwordConfirmElement = document.getElementById('password-confirm');
+const passWordElement = document.getElementById('password');
+const passWordConfirmElement = document.getElementById('password-confirm');
 const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message');
 
 let isValid = false;
-let passwordsMatch = false;
+let passWordsMatch = false;
 
 function validateForm() {
 	isValid = form.checkValidity();
 
 	if (!isValid) {
-		message.textContent = 'Please fill out all fields.';
+		message.textContent = 'fill-out all fields';
 		message.style.color = 'red';
 		messageContainer.style.borderColor = 'red';
 
 		return;
 	};
-	if (passwordElement.value === passwordConfirmElement.value) {
-		passwordsMatch = true;
-		passwordElement.style.borderColor = 'green';
-		passwordConfirmElement.style.borderColor = 'green';
+
+	if (passWordElement.value === passWordConfirmElement.value) {
+		passWordsMatch = true;
+		passWordElement.style.borderColor = 'green';
+		passWordConfirmElement.style.borderColor = 'green';
 	} else {
-		passwordsMatch = false;
-		message.textContent = 'Ensure Passwords Match';
+		passWordsMatch = false;
+		message.textContent = 'enSure passWords match';
 		message.style.color = 'red';
 		messageContainer.style.borderColor = 'red';
-		passwordElement.style.borderColor = 'red';
-		passwordConfirmElement.style.borderColor = 'red';
-		
+		passWordElement.style.borderColor = 'red';
+		passWordConfirmElement.style.borderColor = 'red';
+
 		return;
 	};
 
-	if (isValid && passwordsMatch) {
-		message.textContent = 'Success!';
+	if (isValid && passWordsMatch) {
+		message.textContent = 'Success';
 		message.style.color = 'green';
 		messageContainer.style.borderColor = 'green';
 	};
@@ -42,19 +43,20 @@ function validateForm() {
 function storeFormData() {
 	const user = {
 		name: form.name.value,
-		email: form.email.value,
+		eMail: form.eMail.value,
 		number: form.number.value,
-		website: form.website.value,
-		password: form.password.value
+		webSite: form.webSite.value,
+		passWord: form.passWord.value
 	};
+
 	console.table(user);
 };
 
-function processFormData(e) {
-	e.preventDefault();
+function processFormData(event) {
+	event.preventDefault();
 	validateForm();
 
-	if (isValid && passwordsMatch) {
+	if (isValid && passWordsMatch) {
 		storeFormData();
 	};
 };
